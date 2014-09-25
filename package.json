@@ -1,0 +1,41 @@
+{
+  "name": "my-project-name",
+  "dependencies": {
+    "browserify": "^5.12.0",
+    "browserify-shim": "^3.7.0"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browser": {
+    "jquery": "./bower_components/jquery/dist/jquery.js",
+    "jquery-ui-sortable": "./bower_components/jquery-ui-sortable/jquery-ui-sortable.js",
+    "angular": "./bower_components/angular/angular.js",
+    "angular-ui-sortable": "./bower_components/angular-ui-sortable/sortable.js"
+  },
+  "browserify-shim": {
+    "jquery": {
+      "exports": "$"
+    },
+    "jquery-ui-sortable": {
+      "depends": "jquery",
+      "exports": null
+    },
+    "angular": {
+      "exports": "angular"
+    },
+    "angular-ui-sortable": {
+      "depends": [
+        "angular",
+        "jquery-ui-sortable"
+      ],
+      "exports": "null"
+    }
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^3.0.1"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "my-project-name",
+  "dependencies": {
+    "jquery": "1.x",
+    "jquery-ui-sortable": "*",
+    "angular": "~1.2.25",
+    "angular-ui-sortable": "~0.12.11"
+  }
+}
